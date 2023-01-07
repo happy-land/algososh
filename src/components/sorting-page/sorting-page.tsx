@@ -8,6 +8,7 @@ import { SolutionLayout } from "../ui/solution-layout/solution-layout";
 import styles from "./sorting-page.module.css";
 import { IRandomArray } from "./sorting-type.types";
 import { makeDelay } from "./utils";
+import { swap } from "./utils";
 
 export const SortingPage: React.FC = () => {
   const [array, setArray] = useState<IRandomArray[]>([]);
@@ -45,16 +46,6 @@ export const SortingPage: React.FC = () => {
 
   const handleChangeRadioClick = (e: ChangeEvent<HTMLInputElement>): void => {
     setRadioChecked(e.target.value);
-  };
-
-  const swap = (
-    arr: IRandomArray[],
-    firstIndex: number,
-    secondIndex: number
-  ): void => {
-    const temp = arr[firstIndex];
-    arr[firstIndex] = arr[secondIndex];
-    arr[secondIndex] = temp;
   };
 
   const selectionSort = async (
