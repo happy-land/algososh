@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  width: 567px;
+  display: flex;
+  margin: 0 auto;
+}
+
+.input {
+  margin-right: 12px;
+}
+
+.circles {
+  /* border: 1px solid red; */
+  margin: 120px auto 0;
+  display: flex;
+  gap: 16px;
+}
